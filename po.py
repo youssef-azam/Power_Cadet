@@ -11,10 +11,9 @@ overall_sales_dashboard_url = "https://app.powerbi.com/reportEmbed?reportId=035c
 daily_sales_html_code = f'<iframe title="تقرير المبيعات كاديت - اليومي" width="1140" height="541.25" src="{daily_sales_dashboard_url}" frameborder="0" allowFullScreen="true"></iframe>'
 overall_sales_html_code = f'<iframe title="تقرير المبيعات كاديت" width="1140" height="541.25" src="{overall_sales_dashboard_url}" frameborder="0" allowFullScreen="true"></iframe>'
 
-# Use Streamlit to display the Power BI dashboards using HTML in two columns
-col1, col2 = st.columns(2)
-col1.markdown(daily_sales_html_code, unsafe_allow_html=True)
-col2.markdown(overall_sales_html_code, unsafe_allow_html=True)
+# Use Streamlit to display the Power BI dashboards using HTML in two rows
+st.markdown(daily_sales_html_code, unsafe_allow_html=True)
+st.markdown(overall_sales_html_code, unsafe_allow_html=True)
 
 # Additional Streamlit app code can be added here
 
